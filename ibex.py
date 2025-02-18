@@ -7,7 +7,7 @@ def main():
 
     # date as index
     df.rename(columns={'Unnamed: 0': 'dia'}, inplace=True)
-    df['dia'] = pd.to_datetime(df['dia'], format='%Y/%m/%d')
+    df['dia'] = pd.to_datetime(df['dia'], format='ISO8601')
     df.set_index('dia', inplace=True)
 
     # title
